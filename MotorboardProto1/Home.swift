@@ -9,32 +9,49 @@
 import Foundation
 import UIKit
 
-class ViewController: UIViewController, UIPageViewControllerDataSource {
+class Home: UIViewController, UIPageViewControllerDataSource, UITextFieldDelegate {
     
-
+    // animation settings
+    let DialogAnimationSpeed = 0.6
+    let bgMaskAnimationSpeed = 0.7
+    let signUpViewScaleHidden = CGAffineTransformMakeScale(1, 1)
+    let signUpViewTranslateHidden = CGAffineTransformMakeTranslation(0, -200)
+    let signUpViewScaleVisible = CGAffineTransformMakeScale(1, 1)
+    let signUpViewTranslateVisible = CGAffineTransformMakeTranslation(0, 20)
+    
+    // new objects
     var pageViewController = UIPageViewController()
     var mask = UIView()
     var maskButton = UIButton()
     
-    @IBOutlet weak var signUpView: UIView!
-    @IBOutlet weak var nameTextField: UITextField!
-    
-    var pageTitles: [String] = ["Save time and money", "On-site delivery", "Buy online, pick up in store", "Purchase tracking and eReceipts"]
+    // slide titles
+    var pageHeadlines: [String] = ["Save time and money", "On-site delivery", "Buy online, pick up in store", "Purchase tracking and eReceipts"]
     var currentIndex: Int = 0
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
-    }
+    // storyboard outlets
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var signUpView: UIView!
+    @IBOutlet weak var nameTextField: CustomTextField!
+    @IBOutlet weak var zipTextField: UITextField!
     
+    // storyboard actions
     @IBAction func signupButton(sender: AnyObject) {
         showSignUpModal()
     }
     
+    // set status bar to white
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        nameTextField.delegate = self
+        emailTextField.delegate = self
+        zipTextField.delegate = self
         signUpView.hidden = true
+        
         
         // setup page view controller
         self.pageViewController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
@@ -42,9 +59,9 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         let startingViewController: PageContentViewController = self.viewControllerAtIndex(0)!
         let viewControllers: NSArray = [startingViewController]
         self.pageViewController.setViewControllers(viewControllers, direction: .Forward, animated: true, completion: nil)
-        self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 75);
+        self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 110);
         self.addChildViewController(self.pageViewController)
-        self.view.insertSubview(self.pageViewController.view, atIndex: 1)
+        self.view.insertSubview(self.pageViewController.view, atIndex: 0)
         self.pageViewController.didMoveToParentViewController(self)
         
         // customize the appearance of page indicators
@@ -56,12 +73,9 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         // init mask and maskButton
         initMask()
         
-        var signUpViewScaleHide = CGAffineTransformMakeScale(0.8, 0.8)
-        var signUpViewTranslateHide = CGAffineTransformMakeTranslation(0, -300)
-        self.signUpView.transform = CGAffineTransformConcat( signUpViewScaleHide, signUpViewTranslateHide )
-        self.signUpView.alpha = 0
         
-        showSignUpModal()
+        self.signUpView.transform = CGAffineTransformConcat( signUpViewScaleHidden, signUpViewTranslateHidden )
+        self.signUpView.alpha = 0
         
     }
     
@@ -76,7 +90,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         maskButton.addTarget(self, action: "hideSignUpModal", forControlEvents: .TouchUpInside)
         maskButton.hidden = true
         
-        self.view.insertSubview(mask, atIndex: 2)
+        self.view.insertSubview(mask, atIndex: 1)
         self.view.insertSubview(maskButton, aboveSubview: mask)
     }
     
@@ -84,13 +98,13 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         mask.hidden = false
         maskButton.hidden = false
         
-        spring(0.5){
+        spring(DialogAnimationSpeed){
             self.mask.alpha = 1
         }
     }
     
     func hideMask() {
-        springWithCompletion(0.5, {
+        springWithCompletion(DialogAnimationSpeed - 0.1, {
             self.mask.alpha = 0
             }, { finish in
                 self.mask.hidden = true
@@ -107,7 +121,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         
         
         
-        spring(0.5){
+        spring(DialogAnimationSpeed){
             // scale back walkthrough
             var scale = CGAffineTransformMakeScale(0.8, 0.8)
             var translate = CGAffineTransformMakeTranslation(0, 0)
@@ -116,9 +130,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
             // show signup dialog
             self.signUpView.hidden = false
             
-            var signUpViewScaleShow = CGAffineTransformMakeScale(1, 1)
-            var signUpViewTranslateShow = CGAffineTransformMakeTranslation(0, 0)
-            self.signUpView.transform = CGAffineTransformConcat( signUpViewScaleShow, signUpViewTranslateShow )
+            self.signUpView.transform = CGAffineTransformConcat( self.signUpViewScaleVisible, self.signUpViewTranslateVisible )
             self.signUpView.alpha = 1
             
         }
@@ -130,15 +142,13 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         // hide keyboard
         self.view.endEditing(true)
         
-        spring(0.5){
+        spring(DialogAnimationSpeed - 0.15){
             // scale back walkthrough
             var scale = CGAffineTransformMakeScale(1, 1)
             var translate = CGAffineTransformMakeTranslation(0, 0)
             self.pageViewController.view.transform = CGAffineTransformConcat( scale, translate )
             
-            var signUpViewScaleHide = CGAffineTransformMakeScale(0.8, 0.8)
-            var signUpViewTranslateHide = CGAffineTransformMakeTranslation(0, -300)
-            self.signUpView.transform = CGAffineTransformConcat( signUpViewScaleHide, signUpViewTranslateHide )
+            self.signUpView.transform = CGAffineTransformConcat( self.signUpViewScaleHidden, self.signUpViewTranslateHidden )
             self.signUpView.alpha = 0
         }
     }
@@ -158,7 +168,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         }
         
         index--
-        println("Decreasing Index: \(index)")
+        println("Page Index: \(index)")
         return self.viewControllerAtIndex(index)
     }
     
@@ -171,16 +181,16 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         }
         index++
         
-        println("Increasing Index: \(index)")
+        println("Page Index: \(index)")
         
-        if (index == self.pageTitles.count) {
+        if (index == self.pageHeadlines.count) {
             return nil
         }
         return self.viewControllerAtIndex(index)
     }
     func viewControllerAtIndex(index: Int) -> PageContentViewController?
     {
-        if self.pageTitles.count == 0 || index >= self.pageTitles.count
+        if self.pageHeadlines.count == 0 || index >= self.pageHeadlines.count
         {
             return nil
         }
@@ -189,7 +199,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         let pageContentViewController = self.storyboard!.instantiateViewControllerWithIdentifier("PageContentViewController") as PageContentViewController
         
         // set this view's titleText from pageTitles array
-        pageContentViewController.titleText = self.pageTitles[index]
+        pageContentViewController.titleText = self.pageHeadlines[index]
         // set this view's index
         pageContentViewController.pageIndex = index
         self.currentIndex = index
@@ -200,7 +210,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     // Set the number of dots in the page indicator according to # of pageTitles in array.
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int
     {
-        return self.pageTitles.count
+        return self.pageHeadlines.count
     }
     
     // Start the page indicator at the beginning.

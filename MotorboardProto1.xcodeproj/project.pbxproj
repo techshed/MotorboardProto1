@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B612EC51A2ECD11006D7C70 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B612EC01A2ECD11006D7C70 /* BlurView.swift */; };
+		2B612EC61A2ECD11006D7C70 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B612EC11A2ECD11006D7C70 /* Data.swift */; };
+		2B612EC71A2ECD11006D7C70 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B612EC21A2ECD11006D7C70 /* DesignableView.swift */; };
+		2B612EC81A2ECD11006D7C70 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B612EC31A2ECD11006D7C70 /* Misc.swift */; };
+		2B612EC91A2ECD11006D7C70 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B612EC41A2ECD11006D7C70 /* SpringAnimation.swift */; };
+		2B74D5E81A2FEB500032B2F7 /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B74D5E71A2FEB500032B2F7 /* CustomTextfield.swift */; };
 		2B7E3C561A2E8E7D000F8B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E3C551A2E8E7D000F8B49 /* AppDelegate.swift */; };
-		2B7E3C581A2E8E7D000F8B49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E3C571A2E8E7D000F8B49 /* ViewController.swift */; };
+		2B7E3C581A2E8E7D000F8B49 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E3C571A2E8E7D000F8B49 /* Home.swift */; };
 		2B7E3C5B1A2E8E7D000F8B49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7E3C591A2E8E7D000F8B49 /* Main.storyboard */; };
 		2B7E3C5D1A2E8E7D000F8B49 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B7E3C5C1A2E8E7D000F8B49 /* Images.xcassets */; };
 		2B7E3C601A2E8E7D000F8B49 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B7E3C5E1A2E8E7D000F8B49 /* LaunchScreen.xib */; };
 		2B7E3C6C1A2E8E7D000F8B49 /* MotorboardProto1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E3C6B1A2E8E7D000F8B49 /* MotorboardProto1Tests.swift */; };
-		2B7E3C7B1A2E8F18000F8B49 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E3C761A2E8F18000F8B49 /* BlurView.swift */; };
-		2B7E3C7C1A2E8F18000F8B49 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E3C771A2E8F18000F8B49 /* Data.swift */; };
-		2B7E3C7D1A2E8F18000F8B49 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E3C781A2E8F18000F8B49 /* DesignableView.swift */; };
-		2B7E3C7E1A2E8F18000F8B49 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E3C791A2E8F18000F8B49 /* Misc.swift */; };
-		2B7E3C7F1A2E8F18000F8B49 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E3C7A1A2E8F18000F8B49 /* SpringAnimation.swift */; };
 		2BD26FC41A2E8F8D0098580E /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD26FC31A2E8F8D0098580E /* PageContentViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,21 +33,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B612EC01A2ECD11006D7C70 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		2B612EC11A2ECD11006D7C70 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		2B612EC21A2ECD11006D7C70 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		2B612EC31A2ECD11006D7C70 /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
+		2B612EC41A2ECD11006D7C70 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
+		2B74D5E71A2FEB500032B2F7 /* CustomTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
 		2B7E3C501A2E8E7D000F8B49 /* MotorboardProto1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotorboardProto1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B7E3C541A2E8E7D000F8B49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B7E3C551A2E8E7D000F8B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B7E3C571A2E8E7D000F8B49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B7E3C571A2E8E7D000F8B49 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		2B7E3C5A1A2E8E7D000F8B49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B7E3C5C1A2E8E7D000F8B49 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2B7E3C5F1A2E8E7D000F8B49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2B7E3C651A2E8E7D000F8B49 /* MotorboardProto1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotorboardProto1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B7E3C6A1A2E8E7D000F8B49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B7E3C6B1A2E8E7D000F8B49 /* MotorboardProto1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorboardProto1Tests.swift; sourceTree = "<group>"; };
-		2B7E3C761A2E8F18000F8B49 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
-		2B7E3C771A2E8F18000F8B49 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		2B7E3C781A2E8F18000F8B49 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
-		2B7E3C791A2E8F18000F8B49 /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
-		2B7E3C7A1A2E8F18000F8B49 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 		2BD26FC31A2E8F8D0098580E /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +70,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B612EBF1A2ECD11006D7C70 /* Spring */ = {
+			isa = PBXGroup;
+			children = (
+				2B612EC01A2ECD11006D7C70 /* BlurView.swift */,
+				2B612EC11A2ECD11006D7C70 /* Data.swift */,
+				2B612EC21A2ECD11006D7C70 /* DesignableView.swift */,
+				2B612EC31A2ECD11006D7C70 /* Misc.swift */,
+				2B612EC41A2ECD11006D7C70 /* SpringAnimation.swift */,
+			);
+			name = Spring;
+			path = "../../../../../Downloads/Shots-Assets/Spring";
+			sourceTree = "<group>";
+		};
 		2B7E3C471A2E8E7D000F8B49 = {
 			isa = PBXGroup;
 			children = (
@@ -89,13 +104,14 @@
 		2B7E3C521A2E8E7D000F8B49 /* MotorboardProto1 */ = {
 			isa = PBXGroup;
 			children = (
-				2B7E3C551A2E8E7D000F8B49 /* AppDelegate.swift */,
-				2B7E3C571A2E8E7D000F8B49 /* ViewController.swift */,
-				2BD26FC31A2E8F8D0098580E /* PageContentViewController.swift */,
+				2B7E3C571A2E8E7D000F8B49 /* Home.swift */,
 				2B7E3C591A2E8E7D000F8B49 /* Main.storyboard */,
-				2B7E3C751A2E8F18000F8B49 /* Spring */,
-				2B7E3C5C1A2E8E7D000F8B49 /* Images.xcassets */,
+				2BD26FC31A2E8F8D0098580E /* PageContentViewController.swift */,
+				2B74D5E71A2FEB500032B2F7 /* CustomTextfield.swift */,
 				2B7E3C5E1A2E8E7D000F8B49 /* LaunchScreen.xib */,
+				2B7E3C551A2E8E7D000F8B49 /* AppDelegate.swift */,
+				2B7E3C5C1A2E8E7D000F8B49 /* Images.xcassets */,
+				2B612EBF1A2ECD11006D7C70 /* Spring */,
 				2B7E3C531A2E8E7D000F8B49 /* Supporting Files */,
 			);
 			path = MotorboardProto1;
@@ -124,19 +140,6 @@
 				2B7E3C6A1A2E8E7D000F8B49 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		2B7E3C751A2E8F18000F8B49 /* Spring */ = {
-			isa = PBXGroup;
-			children = (
-				2B7E3C761A2E8F18000F8B49 /* BlurView.swift */,
-				2B7E3C771A2E8F18000F8B49 /* Data.swift */,
-				2B7E3C781A2E8F18000F8B49 /* DesignableView.swift */,
-				2B7E3C791A2E8F18000F8B49 /* Misc.swift */,
-				2B7E3C7A1A2E8F18000F8B49 /* SpringAnimation.swift */,
-			);
-			name = Spring;
-			path = "../../../Downloads/Shots-Assets/Spring";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,14 +242,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B7E3C581A2E8E7D000F8B49 /* ViewController.swift in Sources */,
+				2B7E3C581A2E8E7D000F8B49 /* Home.swift in Sources */,
+				2B612EC61A2ECD11006D7C70 /* Data.swift in Sources */,
+				2B612EC71A2ECD11006D7C70 /* DesignableView.swift in Sources */,
+				2B612EC91A2ECD11006D7C70 /* SpringAnimation.swift in Sources */,
+				2B612EC51A2ECD11006D7C70 /* BlurView.swift in Sources */,
+				2B612EC81A2ECD11006D7C70 /* Misc.swift in Sources */,
 				2BD26FC41A2E8F8D0098580E /* PageContentViewController.swift in Sources */,
 				2B7E3C561A2E8E7D000F8B49 /* AppDelegate.swift in Sources */,
-				2B7E3C7B1A2E8F18000F8B49 /* BlurView.swift in Sources */,
-				2B7E3C7E1A2E8F18000F8B49 /* Misc.swift in Sources */,
-				2B7E3C7F1A2E8F18000F8B49 /* SpringAnimation.swift in Sources */,
-				2B7E3C7D1A2E8F18000F8B49 /* DesignableView.swift in Sources */,
-				2B7E3C7C1A2E8F18000F8B49 /* Data.swift in Sources */,
+				2B74D5E81A2FEB500032B2F7 /* CustomTextfield.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MotorboardProto1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -380,6 +385,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MotorboardProto1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
